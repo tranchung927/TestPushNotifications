@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *itemText;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 

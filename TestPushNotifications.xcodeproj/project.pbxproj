@@ -13,6 +13,7 @@
 		3B20CB1A1F58FE2D00FE1E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20CB181F58FE2D00FE1E6B /* Main.storyboard */; };
 		3B20CB1C1F58FE2D00FE1E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20CB1B1F58FE2D00FE1E6B /* Assets.xcassets */; };
 		3B20CB1F1F58FE2D00FE1E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20CB1D1F58FE2D00FE1E6B /* LaunchScreen.storyboard */; };
+		3B20CB291F59051A00FE1E6B /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CB281F59051A00FE1E6B /* ListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		3B20CB1B1F58FE2D00FE1E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B20CB1E1F58FE2D00FE1E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B20CB201F58FE2D00FE1E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B20CB261F59005E00FE1E6B /* TestPushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestPushNotifications.entitlements; sourceTree = "<group>"; };
+		3B20CB271F59051A00FE1E6B /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		3B20CB281F59051A00FE1E6B /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,14 @@
 		3B20CB0E1F58FE2D00FE1E6B /* TestPushNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				3B20CB261F59005E00FE1E6B /* TestPushNotifications.entitlements */,
 				3B20CB121F58FE2D00FE1E6B /* AppDelegate.h */,
 				3B20CB131F58FE2D00FE1E6B /* AppDelegate.m */,
 				3B20CB151F58FE2D00FE1E6B /* ViewController.h */,
 				3B20CB161F58FE2D00FE1E6B /* ViewController.m */,
 				3B20CB181F58FE2D00FE1E6B /* Main.storyboard */,
+				3B20CB271F59051A00FE1E6B /* ListTableViewController.h */,
+				3B20CB281F59051A00FE1E6B /* ListTableViewController.m */,
 				3B20CB1B1F58FE2D00FE1E6B /* Assets.xcassets */,
 				3B20CB1D1F58FE2D00FE1E6B /* LaunchScreen.storyboard */,
 				3B20CB201F58FE2D00FE1E6B /* Info.plist */,
@@ -110,7 +117,13 @@
 				TargetAttributes = {
 					3B20CB0B1F58FE2D00FE1E6B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SU254TBSN7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -153,6 +166,7 @@
 				3B20CB171F58FE2D00FE1E6B /* ViewController.m in Sources */,
 				3B20CB141F58FE2D00FE1E6B /* AppDelegate.m in Sources */,
 				3B20CB111F58FE2D00FE1E6B /* main.m in Sources */,
+				3B20CB291F59051A00FE1E6B /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestPushNotifications/TestPushNotifications.entitlements;
+				DEVELOPMENT_TEAM = SU254TBSN7;
 				INFOPLIST_FILE = TestPushNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ChungTran.TestPushNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tadi.TestPushNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -283,9 +300,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestPushNotifications/TestPushNotifications.entitlements;
+				DEVELOPMENT_TEAM = SU254TBSN7;
 				INFOPLIST_FILE = TestPushNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ChungTran.TestPushNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tadi.TestPushNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
